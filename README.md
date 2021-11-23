@@ -1,5 +1,5 @@
 # Background
-(Plotly Dash)[https://plotly.com/dash/] is a web application framework for Python that allows you to build beautiful, responsive, interactive data visualizations in seconds. However, an application can only display data aren't always useful. If we want to have a fully-featured application, we need to make use of its backend (Flask)[https://flask.palletsprojects.com/en/2.0.x/].
+[Plotly Dash](https://plotly.com/dash/) is a web application framework for Python that allows you to build beautiful, responsive, interactive data visualizations in seconds. However, an application can only display data aren't always useful. If we want to have a fully-featured application, we need to make use of its backend [Flask](https://flask.palletsprojects.com/en/2.0.x/).
 
 # Issues
 Even though Dash piggyback off of Flask, this Flask is in a sandbox, and doesn't have a lot of the same functionalities. For example, the following ones are missing or requires Dash enterprise version:
