@@ -178,7 +178,7 @@ def create_dash(server):
     """Create a Dash view"""
     app = create_dash_app(server, URL_RULE, URL_BASE_PATHNAME)
 
-    # dash app definitions goes here, same what you would do in normal Dash application
+    # dash app definitions goes here, same as what you would do in normal Dash application
     ...
 
     return app.server
