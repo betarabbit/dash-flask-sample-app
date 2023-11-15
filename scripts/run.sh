@@ -1,10 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# -*- coding: utf-8 -*-
 
 if [[ "${FLASK_ENV}" == "development" ]]; then
-    flask run --host=0.0.0.0 --port 8050
+  flask run --host=0.0.0.0 --port 8050
 else
-    gunicorn wsgi:app \
-        --bind 0.0.0.0:8050 \
-        --workers 2 \
-        --threads 2
+  gunicorn wsgi:app \
+    --bind 0.0.0.0:8050 \
+    --workers 2 \
+    --threads 2
 fi
