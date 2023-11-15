@@ -6,10 +6,10 @@ import importlib
 import logging
 import os
 
-from flask import Flask
+import flask
 
+import config
 from app.views import base_app
-from config import Config
 
 # Logging configuration
 logging.basicConfig(format="%(asctime)s:%(levelname)s:%(name)s:%(message)s")
@@ -18,11 +18,11 @@ logging.getLogger().setLevel(logging.INFO)
 
 def create_app(test_config=None):
   """Create and configure Flask app"""
-  app = Flask(__name__)
+  app = flask.Flask(__name__)
   
   if test_config is None:
     # load the instance config, if it exists, when not testing
-    app.config.from_object(Config)
+    app.config.from_object(config.Config)
   else:
     # load the test config if passed in
     app.config.from_mapping(test_config)

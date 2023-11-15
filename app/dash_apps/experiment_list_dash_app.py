@@ -3,9 +3,11 @@
 
 """Sample basic Dash app"""
 import pandas as pd
-from dash import html
+#from dash import html
+import dash as ds
 
 from app.dash_apps import create_dash_app
+#import app
 
 # endpoint of this page
 URL_RULE = "/experiments"
@@ -21,34 +23,23 @@ def create_dash(server):
     {"ID": [1, 2, 3], "Name": ["Experiment 1", "Experiment 2", "Experiment 2"]}
   )
 
-  app.layout = html.Div(
+  app.layout = ds.html.Div(
     children = [
-      html.Nav(
-        children = html.Ol(
-          [
-            html.Li(
-              "Experiments",
-              id = "current-breadcrumb-item",
-              className = "breadcrumb-item active",
-            ),
-          ],
+      ds.html.Nav(
+        children = ds.html.Ol(
+          [ds.html.Li("Experiments", id="current-breadcrumb-item", className="breadcrumb-item active", ), ],
           className = "breadcrumb",
         )
       ),
-      html.Div(children="List of all experiments."),
-      html.Table(
+      ds.html.Div(children="List of all experiments."),
+      ds.html.Table(
         children = [
-          html.Thead(html.Tr([html.Th(col) for col in df.columns])),
-          html.Tbody([
-            html.Tr(
+          ds.html.Thead(ds.html.Tr([ds.html.Th(col) for col in df.columns])),
+          ds.html.Tbody([
+            ds.html.Tr(
               [
-                html.Td(
-                  html.A(
-                    df.iloc[i][col],
-                    href = f"/experiments/{df.iloc[i][col]}",
-                  )
-                  if col == "ID"
-                  else df.iloc[i][col]
+                ds.html.Td(
+                  ds.html.A(df.iloc[i][col], href = f"/experiments/{df.iloc[i][col]}",) if col == "ID" else df.iloc[i][col]
                 )
                 for col in df.columns
               ]

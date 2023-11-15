@@ -1,12 +1,12 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 """Global configs"""
-from os import environ, path
+import os
+#from os import environ, path
 
-basedir = path.abspath(path.dirname(__file__))
-
-
+basedir = os.path.abspath(os.path.dirname(__file__))
 class Config(object):
-    """Base config class"""
-
-    CSRF_ENABLED = True
-
-    SECRET_KEY = environ.get("SECRET_KEY")
+  """Base config class"""
+  CSRF_ENABLED = True
+  SECRET_KEY   = os.environ.get("SECRET_KEY")

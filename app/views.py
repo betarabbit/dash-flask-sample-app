@@ -13,7 +13,7 @@ top_menus = [
 ]
 
 
-def get_top_menu_items(current_path: str = "/"):
+def get_top_menu_items(current_path:str="/"):
   """Get html template for top menu items."""
   items = []
 
@@ -35,7 +35,6 @@ def get_top_menu_items(current_path: str = "/"):
     )
 
   return "\n".join(items)
-
 
 @base_app.route("/")
 def index():

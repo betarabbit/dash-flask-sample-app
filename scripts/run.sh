@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# -*- coding: utf-8 -*-
 
 if [[ "${FLASK_ENV}" == "development" ]]; then
   flask run --host=0.0.0.0 --port 8050

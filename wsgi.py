@@ -1,4 +1,8 @@
-"""Application entry point"""
-from app import create_app
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-app = create_app()
+"""Application entry point"""
+import app
+#from app import create_app
+
+app = app.create_app()
