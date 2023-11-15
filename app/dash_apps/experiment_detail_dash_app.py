@@ -20,9 +20,9 @@ def create_dash(server):
   app = create_dash_app(server, URL_RULE, URL_BASE_PATHNAME)
   
   df = pd.DataFrame({
-    "Fruit": ["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
+    "Fruit":  ["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
     "Amount": [4, 1, 2, 2, 4, 5],
-    "City": ["SF", "SF", "SF", "Montreal", "Montreal", "Montreal"],
+    "City":   ["SF", "SF", "SF", "Montreal", "Montreal", "Montreal"],
   })
 
   fig = px.bar(df, x="Fruit", y="Amount", color="City", barmode="group")

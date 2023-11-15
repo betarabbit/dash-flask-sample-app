@@ -22,7 +22,7 @@ def create_dash(server):
     html.H1(id="title", children="Custom App"),
     html.Div(
       "Change value in the input box!",
-      style={"marginBottom": "20px"},
+      style = {"marginBottom": "20px"},
     ),
     html.Label("Input:", className="form-label", htmlFor="input"),
     dcc.Input(id="input", type="text", className="form-control"),

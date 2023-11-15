@@ -7,9 +7,9 @@ import flask
 
 base_app = flask.Blueprint("base_app", __name__)
 top_menus = [
-  {"path": "/", "title": "Home"},
+  {"path": "/",            "title": "Home"},
   {"path": "/experiments", "title": "Experiments"},
-  {"path": "/custom-app", "title": "Custom App"},
+  {"path": "/custom-app",  "title": "Custom App"},
 ]
 
 

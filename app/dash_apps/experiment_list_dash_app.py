@@ -29,7 +29,7 @@ def create_dash(server):
             html.Li(
               "Experiments",
               id = "current-breadcrumb-item",
-              className="breadcrumb-item active",
+              className = "breadcrumb-item active",
             ),
           ],
           className = "breadcrumb",
@@ -45,7 +45,7 @@ def create_dash(server):
                 html.Td(
                   html.A(
                     df.iloc[i][col],
-                    href=f"/experiments/{df.iloc[i][col]}",
+                    href = f"/experiments/{df.iloc[i][col]}",
                   )
                   if col == "ID"
                   else df.iloc[i][col]
@@ -56,7 +56,7 @@ def create_dash(server):
             for i in range(len(df))
           ]),
         ],
-        className="table table-hover table-bordered",
+        className = "table table-hover table-bordered",
       ),
       ]
     )

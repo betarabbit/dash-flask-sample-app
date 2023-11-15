@@ -17,7 +17,7 @@ env = jinja2.Environment(
 def customize_index_string(app, url):
   """Custom app's index string"""
   app.index_string = env.get_template("dash_layout.html").render(
-    top_menu_items=get_top_menu_items(url)
+    top_menu_items = get_top_menu_items(url)
   )
 
 
